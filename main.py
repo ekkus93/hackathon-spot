@@ -40,10 +40,17 @@ def upload_image_to_api(image_file, auth_token):
     return response
 
 def detect_apriltag(image):
+    # Convert the image to grayscale
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    
+    # Initialize the AprilTag detector
     detector = apriltag.Detector()
-    result = detector.detect(gray)
-    return len(result) > 0
+    
+    # Detect AprilTags in the grayscale image
+    detections = detector.detect(gray)
+    
+    # Check if any AprilTag is detected
+    return len(detections) > 0
 
 def main():
     auth_token = os.getenv('AUTH_TOKEN')
