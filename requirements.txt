@@ -1,1 +1,6 @@
+opencv-python
+apriltag
+mimetypes
+requests
+
 
