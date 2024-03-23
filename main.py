@@ -51,7 +51,7 @@ def main():
         spot.move_by_velocity_control(v_x=-0.3, v_y=0, v_rot=0, cmd_duration=2)
         capture_image()
         time.sleep(3)
-
+	print("I took 3 photo.")
 
 if __name__ == '__main__':
     main()
