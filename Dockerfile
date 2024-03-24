@@ -24,7 +24,7 @@ RUN cmake -B build -DCMAKE_BUILD_TYPE=Release
 RUN cmake --build build --target install
 
 # Install Python dependencies
-RUN python3.8 -m pip install -r requirements.txt
+#RUN python3.8 -m pip install -r requirements.txt
 
 # Install Python bindings (optional)
 WORKDIR /usr/src/apriltag/python
