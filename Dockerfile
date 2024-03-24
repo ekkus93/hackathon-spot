@@ -33,7 +33,7 @@ COPY . .
 RUN python3.8 -m pip install -r requirements.txt
 
 RUN cd apriltag-master && make -B build -DCMAKE_BUILD_TYPE=Release \
-    && cmake --build build --target install \\
+    && cmake --build build --target install \
     && python3 setup.py install
 
 # Command to run your application
