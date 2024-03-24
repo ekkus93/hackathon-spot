@@ -24,7 +24,8 @@ WORKDIR /usr/src
 #RUN cmake --build build --target install
 
 # Install Python dependencies
-RUN python3.8 -m pip install -r requirements.txt
+COPY requirements.txt /tmp/requirements.txt
+RUN python3.8 -m pip install -r /tmp/requirements.txt
 
 # Install Python bindings (optional)
 #WORKDIR /usr/src/apriltag/python
