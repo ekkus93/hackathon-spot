@@ -28,7 +28,7 @@ RUN cmake --build build --target install
 
 # Install Python bindings (optional)
 WORKDIR /usr/src/apriltag/python
-RUN python3 setup.py install
+RUN cd /usr/src/apriltag/python && python3 setup.py install
 
 # Copy your application code
 WORKDIR /app
