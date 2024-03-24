@@ -14,7 +14,9 @@ RUN apt-get update && apt-get install -y \
 
 # Clone AprilTag repository
 WORKDIR /usr/src
-RUN git clone git@github.com:ekkus93/apriltag.git
+#RUN git clone git@github.com:ekkus93/apriltag.git
+COPY apriltag-master.zip /usr/src/apriltag-master.zip
+RUN unzip /usr/src/apriltag-master.zip && mv /usr/src/apriltag-master /usr/src/apriltag
 
 # Build AprilTag library
 WORKDIR /usr/src/apriltag
