@@ -27,8 +27,8 @@ RUN cmake --build build --target install
 #RUN python3.8 -m pip install -r requirements.txt
 
 # Install Python bindings (optional)
-WORKDIR /usr/src/apriltag/python
-RUN cd /usr/src/apriltag/python && python3 setup.py install
+#WORKDIR /usr/src/apriltag/python
+#RUN cd /usr/src/apriltag/python && python3 setup.py install
 
 # Copy your application code
 WORKDIR /app
